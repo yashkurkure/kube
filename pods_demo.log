@@ -1,0 +1,73 @@
+Script started on 2023-06-11 16:25:16-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="45"]
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ kubctl run nginx --iomage[K[K[K[K[Kmage=nginx
+[?2004lCommand 'kubctl' not found, did you mean:
+  command 'kubectl' from snap kubectl (1.27.2)
+See 'snap info <snapname>' for additional versions.
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ kubctl run nginx --image=nginx[1@e
+[?2004lpod/nginx created
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ kubeckt[K[Ktk [K[Kl get pods
+[?2004lNAME    READY   STATUS    RESTARTS   AGE
+nginx   1/1     Running   0          40s
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ kubectl descibe [K[K[K[K[Kcribe pob nginx
+[?2004lerror: the server doesn't have a resource type "pob"
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ kubectl describe pob nginx[1P nginxd nginx
+[?2004lName:             nginx
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.59.100
+Start Time:       Sun, 11 Jun 2023 16:25:45 -0500
+Labels:           run=nginx
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.5
+IPs:
+  IP:  10.244.0.5
+Containers:
+  nginx:
+    Container ID:   docker://89e5033dd7876a6f52ffa25f248468fee24bd9068c2d3028e525d59ff4f07ce8
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:af296b188c7b7df99ba960ca614439c99cb7cf252ed7bbc23e90cfda59092305
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 11 Jun 2023 16:25:47 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-kbk4z (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-kbk4z:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  70s   default-scheduler  Successfully assigned default/nginx to minikube
+  Normal  Pulling    69s   kubelet            Pulling image "nginx"
+  Normal  Pulled     68s   kubelet            Successfully pulled image "nginx" in 581.134504ms (581.139273ms including waiting)
+  Normal  Created    68s   kubelet            Created container nginx
+  Normal  Started    68s   kubelet            Started container nginx
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ kubectl get pods -o wide
+[?2004lNAME    READY   STATUS    RESTARTS   AGE    IP           NODE       NOMINATED NODE   READINESS GATES
+nginx   1/1     Running   0          3m9s   10.244.0.5   minikube   <none>           <none>
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ [K]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ ls
+[?2004lout
+[?2004h]0;yash@pop-os: ~/ws/kube[01;32myash@pop-os[00m:[01;34m~/ws/kube[00m$ exit
+[?2004lexit
+
+Script done on 2023-06-11 16:29:30-05:00 [COMMAND_EXIT_CODE="0"]
