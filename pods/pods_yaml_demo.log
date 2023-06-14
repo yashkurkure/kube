@@ -1,0 +1,82 @@
+Script started on 2023-06-13 19:50:57-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="104" LINES="92"]
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ minikuibe[K[K[K[Kube start
+[?2004lW0613 19:51:04.030333   71199 main.go:291] Unable to resolve the current Docker CLI context "default": context "default" does not exist
+😄  minikube v1.30.1 on Debian bookworm/sid
+✨  Using the virtualbox driver based on existing profile
+👍  Starting control plane node minikube in cluster minikube
+🔄  Restarting existing virtualbox VM for "minikube" ...
+
+❌  Exiting due to RUNTIME_ENABLE: Failed to enable container runtime: sudo systemctl restart cri-docker.socket: Process exited with status 1
+stdout:
+
+stderr:
+Job failed. See "journalctl -xe" for details.
+
+
+[31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ sudo minikube start[K[K[K[Ktart
+[?2004l[sudo] password for yash: 
+😄  minikube v1.30.1 on Debian bookworm/sid
+✨  Automatically selected the docker driver. Other choices: qemu2, virtualbox, none, ssh
+🛑  The "docker" driver should not be used with root privileges. If you wish to continue as root, use --force.
+💡  If you are running minikube within a VM, consider using --driver=none:
+📘    https://minikube.sigs.k8s.io/docs/reference/drivers/none/
+
+❌  Exiting due to DRV_AS_ROOT: The "docker" driver should not be used with root privileges.
+
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ (reverse-i-search)`': [Km': sudo [7mm[27minikube start[1@i': sudo [7mmi[27m[1@n': sudo [7mmin[27m[1@i': sudo [7mmini[27m[5Pkubectl delete deployment hello-[7mmini[27mkube[2Pservices[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pminikube service[C[C[C[C[C[C[C[7mmini[27mkube service hello-minikube[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cminikube service hello-[7mmini[27mkube --url[7mmini[27mkube service hello-minikubectl expose deployment hello-[7mmini[27mkube --type=NodePort --port=8080create deployment hello-[7mmini[27mkube --image=kicbase/echo-server:1.0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7mmini[27mkube status[K[C[C[C[C[C[C[C[C[C[C[C[Crt --driver=virtualbox[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ minikube start --driver=virtualbox[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lW0613 19:53:33.305971   71862 main.go:291] Unable to resolve the current Docker CLI context "default": context "default" does not exist
+😄  minikube v1.30.1 on Debian bookworm/sid
+✨  Using the virtualbox driver based on existing profile
+👍  Starting control plane node minikube in cluster minikube
+🏃  Updating the running virtualbox "minikube" VM ...
+🐳  Preparing Kubernetes v1.26.3 on Docker 20.10.23 ...| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K| WW[K[K/ WW[K[K- WW[K[K\ WW[K[K
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+[31m╭───────────────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                                   [31m│[0m
+[31m│[0m    You have selected "virtualbox" driver, but there are better options !                          [31m│[0m
+[31m│[0m    For better performance and support consider using a different driver:                          [31m│[0m
+[31m│[0m            - qemu2                                                                                [31m│[0m
+[31m│[0m                                                                                                   [31m│[0m
+[31m│[0m    To turn off this warning run:                                                                  [31m│[0m
+[31m│[0m                                                                                                   [31m│[0m
+[31m│[0m            $ minikube config set WantVirtualBoxDriverWarning false                                [31m│[0m
+[31m│[0m                                                                                                   [31m│[0m
+[31m│[0m                                                                                                   [31m│[0m
+[31m│[0m    To learn more about on minikube drivers checkout https://minikube.sigs.k8s.io/docs/drivers/    [31m│[0m
+[31m│[0m    To see benchmarks checkout https://minikube.sigs.k8s.io/docs/benchmarks/cpuusage/              [31m│[0m
+[31m│[0m                                                                                                   [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────────────╯[0m
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kubectl gete [K[K nodes
+[?2004lNAME       STATUS   ROLES           AGE    VERSION
+minikube   Ready    control-plane   2d6h   v1.26.3
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kubectl apply -f pod.yaml
+[?2004lerror: error parsing pod.yaml: error converting YAML to JSON: yaml: line 4: found character that cannot start any token
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ [K]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kubectl apply -f pod.yaml
+[?2004lerror: error parsing pod.yaml: error converting YAML to JSON: yaml: line 10: did not find expected '-' indicator
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kubectl apply -f pod.yaml[8Pget nodesapply -f pod.yaml
+[?2004lWarning: resource pods/nginx is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+pod/nginx configured
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kubectl get pods
+[?2004lNAME    READY   STATUS    RESTARTS        AGE
+nginx   1/1     Running   1 (7m37s ago)   2d3h
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kub[K[K[Kkubectl get podsapply -f pod.yaml[9Pget pods[Kkubectl get podsapply -f pod.yaml[9Pget pods[K[K[K[K[K[K[K[Kdelete pod nginx
+[?2004lError from server (NotFound): pods "nginx" not found
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ kubectl delete pod nginx[8Pget podsdelete pod nginx[8Pget podsapply -f pod.yaml[9Pget pods
+[?2004lNo resources found in default namespace.
+[?2004h]0;yash@pop-os: ~/ws/kube/pods[01;32myash@pop-os[00m:[01;34m~/ws/kube/pods[00m$ exit
+[?2004lexit
+
+Script done on 2023-06-13 20:01:01-05:00 [COMMAND_EXIT_CODE="0"]
